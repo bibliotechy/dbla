@@ -1,7 +1,7 @@
 module Dbla
   module SearchBuilderBehavior
     def processed_parameters
-      request.tap do |request_parameters|
+      Blacklight::Solr::Request.new.tap do |request_parameters|
         if blacklight_params[:q] || blacklight_params[:f]
           request_parameters[:q] = blacklight_params.fetch(:q,'')
         end
