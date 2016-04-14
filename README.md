@@ -7,7 +7,7 @@ Access [DPLA](http://dp.la)'s API via the [Blacklight](http://projectblacklight.
 1. Generate a Blacklight app:
 
 ```console
-$ rails new search_app -m https://raw.github.com/projectblacklight/blacklight/master/template.demo.rb
+$ rails new search_app -m https://gist.github.com/escowles/bc17898716a6fdfcc801c5a32fb0a0cf/raw/b4d462c870bbaaef09fe76e64eb424f7e5857360/template.rb
 $ cd search_app
 ```
 
