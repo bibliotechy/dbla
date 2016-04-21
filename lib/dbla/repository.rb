@@ -22,13 +22,13 @@ module Dbla
           fq << fqv
         end
         q << "&facets=#{fq.join(',')}" unless fq.empty?
-        if params.page
-          q << "&page=#{params.page}"
+        if params[:page]
+          q << "&page=#{params[:page]}"
         end
-        if params.rows
-          q << "&page_size=#{params.rows}"
+        if params[:rows]
+          q << "&page_size=#{params[:rows]}"
         end
-        params.facet_filters do |facet_field, value|
+        SearchBuilderBehavior.facet_filters params do |facet_field, value|
           value = "\"#{value}\"" if value.index(' ')
           q << "&#{facet_field}=#{CGI::escape(value)}"
         end

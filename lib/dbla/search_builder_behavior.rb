@@ -7,7 +7,7 @@ module Dbla
         end
       end
     end
-    def facet_filters
+    def self.facet_filters(blacklight_params)
       # :fq, map from :f.
       if ( blacklight_params[:f])
         f_request_params = blacklight_params[:f]

@@ -16,10 +16,15 @@ module Dbla
 
     alias_method :rows, :limit
 
+
     def sort
       # REVIEW: There are mixed style key accesses (strings and symbols);
       # Could/Should this be "normalized"?
       params[:sort]
+    end
+
+    def docs
+      documents
     end
 
     # Facets are built from this method's output
